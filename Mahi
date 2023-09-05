@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Management</title>
+</head>
+<body>
+    <h1>Customer Management</h1>
+    
+    <!-- Authentication Section -->
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="login_id">Login ID:</label>
+        <input type="text" id="login_id" name="login_id" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="button" onclick="authenticate()">Login</button>
+    </form>
+
+    <!-- Create Customer Section -->
+    <h2>Create Customer</h2>
+    <form id="createCustomerForm">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required><br>
+        <!-- Add other customer fields here -->
+        <button type="button" onclick="createCustomer()">Create Customer</button>
+    </form>
+
+    <!-- Customer List Section -->
+    <h2>Customer List</h2>
+    <button type="button" onclick="getCustomerList()">Get Customer List</button>
+    <table id="customerTable" border="1">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Street</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+
+    <!-- Delete Customer Section -->
+    <h2>Delete Customer</h2>
+    <form id="deleteCustomerForm">
+        <label for="delete_uuid">Customer UUID:</label>
+        <input type="text" id="delete_uuid" name="uuid" required><br>
+        <button type="button" onclick="deleteCustomer()">Delete Customer</button>
+    </form>
+
+    <!-- Update Customer Section -->
+    <h2>Update Customer</h2>
+    <form id="updateCustomerForm">
+        <label for="update_uuid">Customer UUID:</label>
+        <input type="text" id="update_uuid" name="uuid" required><br>
+        <label for="update_first_name">First Name:</label>
+        <input type="text" id="update_first_name" name="first_name" required><br>
+        <label for="update_last_name">Last Name:</label>
+        <input type="text" id="update_last_name" name="last_name" required><br>
+        <!-- Add other customer fields here -->
+        <button type="button" onclick="updateCustomer()">Update Customer</button>
+    </form>
+
+    <script>
+        // Function to authenticate user and retrieve the Bearer token
+        function authenticate() {
+            // Use Fetch API or XMLHttpRequest to make a POST request to the authentication endpoint
+            // Handle the response to get the Bearer token and store it for subsequent API calls
+        }
+
+        // Function to create a new customer
+        function createCustomer() {
+            // Use Fetch API or XMLHttpRequest to make a POST request to the create customer endpoint
+            // Include the Bearer token in the Authorization header
+            // Handle the response (success or failure)
+        }
+
+        // Function to get the list of customers
+        function getCustomerList() {
+            // Use Fetch API or XMLHttpRequest to make a GET request to the get customer list endpoint
+            // Include the Bearer token in the Authorization header
+            // Handle the response to populate the customer table
+        }
+
+        // Function to delete a customer
+        function deleteCustomer() {
+            // Use Fetch API or XMLHttpRequest to make a POST request to the delete customer endpoint
+            // Include the Bearer token in the Authorization header
+            // Include the UUID in the request parameters
+            // Handle the response (success or failure)
+        }
+
+        // Function to update a customer
+        function updateCustomer() {
+            // Use Fetch API or XMLHttpRequest to make a POST request to the update customer endpoint
+            // Include the Bearer token in the Authorization header
+            // Include the UUID and customer data in the request body
+            // Handle the response (success or failure)
+        }
+    </script>
+</body>
+</html>
